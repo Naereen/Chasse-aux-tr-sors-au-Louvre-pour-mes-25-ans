@@ -1,0 +1,113 @@
+\documentclass[a4-paper,11pt]{tufte-book}
+
+%% Well understand input, and nice output
+\usepackage[utf8]{inputenc}
+% \usepackage{lmodern}
+% \usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+
+%%
+% Book metadata
+\title{Chasse aux trésors photographique au Musée du Louvre}
+\author{Lilian Besson \& Hélène Javelaud}
+\publisher{``À nos 50 ans'', samedi 10 février 2018}
+
+\usepackage{palatino}
+
+% \renewcommand*{\thefootnote}{\alph{footnote}}
+
+%%
+% For nicely typeset tabular material
+\usepackage{booktabs}
+
+%%
+% For graphics / images
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+%% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+%% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or Janvier\or Février\or Mars\or Avril\or Mai\or Juin\or
+  Juillet\or Août\or Septembre\or Octobre\or Novembre\or
+  Décembre\fi\space\number\year
+}
+
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+% Define number of people in each team
+\include{numberofpeopleineachteam.tex}  % XXX automate this?
+\include{numberofenigmas.tex}           % XXX automate this?
+
+\begin{document}
+
+% Front matter
+% \frontmatter
+
+% r.1 blank page
+% \blankpage
+
+% r.3 full title page
+\maketitle
+
+
+% v.4 copyright page
+\newpage
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ \the\year\ \thanklessauthor
+
+% \par\smallcaps{https://github.com/Naereen/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans}
+
+\par Cette œuvre est mise à disposition sous licence Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0 International. Pour voir une copie de cette licence, visitez \url{http://creativecommons.org/licenses/by-nc-nd/4.0/} ou écrivez à Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.\index{license}
+
+\par\textit{Première édition, \monthyear}
+\end{fullwidth}
+
+% r.5 contents
+\tableofcontents
+
+% \listoffigures
+
+% \listoftables
+
+% ---
+
+% r.9 introduction
+\cleardoublepage
+
+\input{introduction.tex}
+
+
+% r.10 all the enigmas
+\cleardoublepage
+
+\input{all.tex}
+
+
+% r.10 conclusion
+\cleardoublepage
+
+\introduction{conclusion.tex}
+
+\newpage
+\blankpage
+
+\end{document}

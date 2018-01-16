@@ -1,5 +1,7 @@
 src/*.tex
 
+telephones.tex
+
 # LaTeX temporary files #
 #########################
 *.log
