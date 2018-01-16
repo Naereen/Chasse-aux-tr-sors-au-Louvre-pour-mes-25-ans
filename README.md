@@ -11,6 +11,10 @@
 
 - Liste d'énigmes : pas encore ! :boom: seulement après le jour J :smiley: !
 
+- Exemple de deux énigmes ([29](srd/29.md) et [21](src/21.md), des clins d'œil à Kaamelott) :
+
+![https://kaamelott-soundboard.2ec0b4.fr/](screenshots/demo4.png)
+
 ## À propos
 
 Pour fêter nos 25 ans avec une amie, nous avons organisé  une "chasse aux trésors", au musée du Louvre, en février 2018.
