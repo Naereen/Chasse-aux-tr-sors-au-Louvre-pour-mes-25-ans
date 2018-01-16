@@ -3,9 +3,9 @@
 %
 % \begin{center}\rule{0.6\linewidth}{\linethickness}\end{center}
 
-\begin{huge}
+\begin{LARGE}
 $body$
-\end{huge}
+\end{LARGE}
 
 \begin{center}\rule{0.6\linewidth}{\linethickness}\end{center}
 % \vfill
