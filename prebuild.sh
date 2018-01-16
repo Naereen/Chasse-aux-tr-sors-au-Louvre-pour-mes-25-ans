@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-./config.sh
+. ./config.sh
 
 # 1. update config.tex
 echo "Updating 'config.tex'..."
