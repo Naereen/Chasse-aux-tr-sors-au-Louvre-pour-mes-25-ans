@@ -1,30 +1,45 @@
 # Chasse aux trésors au Louvre pour mes 25 ans
 
-FIXME inclure une jolie capture d'écran d'un des livrets d'énigmes qui donne un lien vers le PDF
+## Aperçu du document
+- Première page :
+
+![https://perso.crans.org/besson/publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/main.pdf](screenshots/demo1.png)
+
+- Introduction avec les règles du jeu et conclusion :
+
+<a href="https://perso.crans.org/besson/publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/main.pdf"><img width="50%" src="screenshots/demo2.png"></a><a href="https://perso.crans.org/besson/publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/main.pdf"><img width="50%" src="screenshots/demo3.png"></a>
+
+- Liste d'énigmes : pas encore ! :boom: seulement après le jour J :smiley: !
 
 ## À propos
 
-Pour fêter nos 25 ans, j'ai organisé avec une amie une "chasse aux trésors", au musée du Louvre, en février 2018.
+Pour fêter nos 25 ans avec une amie, nous avons organisé  une "chasse aux trésors", au musée du Louvre, en février 2018.
 
-Nous avions rassemblé environ
+Nous avons écrit 50 énigmes, consistant pour la plupart en une tâche simple du genre ["prendre en photo 5 extraits écrits en langue ancienne"](src/1.md), ["prendre en photo une statue de Voltaire"](src/2.md), etc.
+Certaines étaient plus difficiles, et moins objectives, comme ["trouver un sosie de Lilian"](src/4.md)...
+
+Nous avions réunis 24 amis, regroupés en équipe de 4 personnes.
 
 Ce dépôt Git contient les sources (LaTeX et Markdown), des modèles et des scripts pour créer des livres d'énigmes.
 
+---
+
 ## Construire les livrets d'énigmes
-- Dépendances : git, make, pdflatex, pandoc, python et bash. Testé seulement sous [XUbuntu 17.10](https://xubuntu.org/getxubuntu/)
+
+- Dépendances : git, make, pdflatex, pandoc, python, [PDFCompress](https://bitbucket.org/lbesson/bin/src/master/PDFCompress) et bash. Testé seulement sous [XUbuntu 17.10](https://xubuntu.org/getxubuntu/),
 - Clonez ce dépôt,
 ```bash
-cd /tmp/  # ou n'importe où
-git clone https://github.com/Naereen/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
-cd Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
+$ cd /tmp/  # ou n'importe où
+$ git clone https://github.com/Naereen/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
+$ cd Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
 ```
 - **ATTENTION** : renseignez le nombre d'équipes `NB_EQUIPES`, le nombre de joueurs par équipes `NB_PAR_EQUIPES` et le nombre de questions par fiche d'énigmes `NB_QUESTIONS`, dans le fichier [`config.sh`](config.sh),
 - Si besoin, rajoutez des énigmes (en rédigeant des petits fichiers Markdown, suivant [ce modèle](template.md)), comme ceux dans ce dossier [`src`](src/),
 - Enfin, construisez tous les livrets en appelant `make all_pdf`. Ça peut prendre quelques minutes !
 ```bash
-make all_pdf
+$ make all_pdf
 ```
-- Cela va constituer dans le dossier [`output`](output/) `NB_TEAM` livrets, avec leur source LaTeX et un document PDF compilé, chacun contenant `NB_QUESTIONS` questions.
+- Cela va constituer, dans le dossier [`output/`](output/), `NB_TEAM` différents livrets, avec simplement un document PDF compilé, chacun contenant `NB_QUESTIONS` questions. La source LaTeX n'est pas sauvegardée, pour assurer une non-reproductibilité de l'échantillon aléatoire ! (inutile, mais drôle !)
 
 ----
 
@@ -32,11 +47,15 @@ make all_pdf
 - La page [sélections du site web du Louvre](http://www.louvre.fr/selections)
 - Une visite au Louvre !
 - De l'aide de nos amis, merci notamment à [Ludovic Sacchelli](http://www.cmap.polytechnique.fr/~sacchelli/).
-- De l'inspiration, de nombreuses sources...
+- De l'inspiration et de nombreuses sources...
 
 ----
 
 ## Aspect technique
+- Ce document a été rédigé et compilé par mes soins, en sélectionnant *aléatoirement* des énigmes parmi une liste [plus grande](src/). Chaque livret contient **25** énigmes, tirées aléatoirement parmi **50** (et ces nombres sont configurables).
+- Chaque énigme a été rédigée comme un document [Markdown](https://daringfireball.net/projects/markdown/), qui est ensuite compilé en LaTeX par [`pandoc`](http://pandoc.org/).
+- Le document principal est un simple document LaTeX, utilisant le style très épuré de [Tufte-LaTeX](https://github.com/Tufte-LaTeX/tufte-latex).
+- Ce recueil à été rédigé et imprimé en février 2018.
 
 ----
 

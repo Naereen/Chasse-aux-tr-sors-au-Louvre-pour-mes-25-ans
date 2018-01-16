@@ -1,0 +1,4 @@
+- Ce document a été rédigé et compilé par mes soins, en sélectionnant *aléatoirement* des énigmes parmi une liste [plus grande](src/). Chaque livret contient énigmes, tirées aléatoirement parmi .
+- Chaque énigme a été rédigée comme un document [Markdown](https://daringfireball.net/projects/markdown/), qui est ensuite compilé en LaTeX par [`pandoc`](http://pandoc.org/).
+- Le document principal est un simple document LaTeX, utilisant le style très épuré de [Tufte-LaTeX](https://github.com/Tufte-LaTeX/tufte-latex).
+- Ce recueil à été rédigé et imprimé en février 2018.

@@ -19,6 +19,7 @@ function buildteam() {
 
     # copy
     echo -e "Copying current 'main.pdf' to 'output/$team.pdf' ..."
+    PDFCompress main.pdf
     cp -vf main.pdf output/$team.pdf
     pdfinfo output/$team.pdf | grep 'Pages'
 }

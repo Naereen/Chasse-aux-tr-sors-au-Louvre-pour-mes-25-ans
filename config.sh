@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ATTENTION changer ici !
-export NB_EQUIPES=2
+export NB_EQUIPES=7
 export NB_PAR_EQUIPE=4
 export NB_QUESTIONS=25
 
