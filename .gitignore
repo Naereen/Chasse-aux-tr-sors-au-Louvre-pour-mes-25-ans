@@ -1,6 +1,7 @@
 output/*.pdf
 *.pdf
 src/*.tex
+all.tex
 
 telephones.tex
 
