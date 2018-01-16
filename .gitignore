@@ -1,3 +1,5 @@
+output/*.pdf
+*.pdf
 src/*.tex
 
 telephones.tex

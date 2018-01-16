@@ -1,22 +1,20 @@
-\documentclass[a4-paper,11pt]{tufte-book}
+\documentclass[a4-paper,11pt,justified]{tufte-book}
 
 %% Well understand input, and nice output
 \usepackage[utf8]{inputenc}
-% \usepackage{lmodern}
-% \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 
-\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+\hypersetup{colorlinks}  % uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
 
 %%
 % Book metadata
-\title{Chasse aux trésors photographique au Musée du Louvre}
+\title{``Chasse aux trésors photographique \\ au Musée du Louvre''}
 \author{Lilian Besson \& Hélène Javelaud}
 \publisher{``À nos 50 ans'', samedi 10 février 2018}
 
 \usepackage{palatino}
-
-% \renewcommand*{\thefootnote}{\alph{footnote}}
 
 %%
 % For nicely typeset tabular material
@@ -50,7 +48,7 @@
 \newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
 
 % Define macros for config
-\include{config.tex}
+\input{config.tex}
 
 \begin{document}
 
@@ -104,7 +102,7 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 % r.10 conclusion
 \cleardoublepage
 
-\introduction{conclusion.tex}
+\input{conclusion.tex}
 
 \newpage
 \blankpage
