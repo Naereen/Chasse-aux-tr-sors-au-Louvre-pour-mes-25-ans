@@ -1,4 +1,4 @@
-\documentclass[a4-paper,11pt,justified]{tufte-book}
+\documentclass[a4paper,12pt,justified,twoside,notoc]{tufte-book}
 
 %% Well understand input, and nice output
 \usepackage[utf8]{inputenc}
@@ -8,23 +8,20 @@
 
 \hypersetup{colorlinks}  % uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
 
-%%
-% Book metadata
+%% Book metadata
 \title{``Chasse aux trésors photographique \\ au Musée du Louvre''}
 \author{Lilian Besson \& Hélène Javelaud}
 \publisher{``À nos 50 ans'', samedi 10 février 2018}
 
 \usepackage{palatino}
 
-%%
-% For nicely typeset tabular material
+%% For nicely typeset tabular material
 \usepackage{booktabs}
 
-%%
-% For graphics / images
+%% For graphics / images
 \usepackage{graphicx}
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-\graphicspath{{graphics/}}
+\graphicspath{{pictures/}}
 
 % The fancyvrb package lets us customize the formatting of verbatim
 % environments.  We use a slightly smaller font.
@@ -34,11 +31,16 @@
 %% Prints a trailing space in a smart way.
 \usepackage{xspace}
 
+%% https://tex.stackexchange.com/a/157404/
+\usepackage[tocflat]{tocstyle}
+\usetocstyle{standard}
+
+
 %% Prints the month name (e.g., January) and the year (e.g., 2008)
 \newcommand{\monthyear}{%
-  \ifcase\month\or Janvier\or Février\or Mars\or Avril\or Mai\or Juin\or
-  Juillet\or Août\or Septembre\or Octobre\or Novembre\or
-  Décembre\fi\space\number\year
+  \ifcase\month\or janvier\or février\or mars\or avril\or mai\or juin\or
+  juillet\or août\or septembre\or octobre\or novembre\or
+  décembre\fi\space\number\year
 }
 
 \providecommand{\tightlist}{%
@@ -50,13 +52,14 @@
 % Define macros for config
 \input{config.tex}
 
+\global\marginparsep=34pt
+\global\marginparwidth=124pt
+\global\textwidth=285pt
+% \global\inner=1cm
+% \global\outer=2cm
+
 \begin{document}
 
-% Front matter
-% \frontmatter
-
-% r.1 blank page
-% \blankpage
 
 % r.3 full title page
 \maketitle
@@ -65,7 +68,13 @@
 % v.4 copyright page
 \newpage
 \begin{fullwidth}
-~\vfill
+
+\begin{center}
+  \includegraphics[width=0.70\textwidth]{Paris_Louvre_Venus_de_Milo_Debay_drawing.png}
+\end{center}
+
+~
+\vfill
 \thispagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{\baselineskip}
@@ -75,33 +84,37 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 \par Cette œuvre est mise à disposition sous licence Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0 International. Pour voir une copie de cette licence, visitez \url{http://creativecommons.org/licenses/by-nc-nd/4.0/} ou écrivez à Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.\index{license}
 
-\par\textit{Première édition, \monthyear}
+\par\textit{Première édition, \monthyear}.
 \end{fullwidth}
 
 % r.5 contents
-\tableofcontents
+\setcounter{tocdepth}{2}
+
+\begin{large}
+  \tableofcontents
+\end{large}
 
 % \listoffigures
-
 % \listoftables
 
 % ---
 
 % r.9 introduction
 \cleardoublepage
-
 \input{introduction.tex}
 
 
 % r.10 all the enigmas
 \cleardoublepage
+\chapter{Énigmes}
 
+\begin{fullwidth}
 \input{all.tex}
+\end{fullwidth}
 
 
 % r.10 conclusion
 \cleardoublepage
-
 \input{conclusion.tex}
 
 \newpage

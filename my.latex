@@ -1,12 +1,12 @@
-\newpage
-\chapter[$if(Title)$$Title$$else$Sans Titre$endif$]{$if(Title)$$Title$$else$Sans Titre$endif$$if(date)$\footnotemark$endif$}
+% \newpage
+\section[$if(Title)$$Title$$else$Sans Titre$endif$]{$if(Title)$$Title$$else$Sans Titre$endif$$if(date)$\footnotemark$endif$}
 %
-\begin{center}\rule{0.6\linewidth}{\linethickness}\end{center}
+% \begin{center}\rule{0.6\linewidth}{\linethickness}\end{center}
 
 \begin{huge}
 $body$
 \end{huge}
 
 \begin{center}\rule{0.6\linewidth}{\linethickness}\end{center}
-\vfill
+% \vfill
 $if(date)$\footnotetext{Publié le $date$}$endif$

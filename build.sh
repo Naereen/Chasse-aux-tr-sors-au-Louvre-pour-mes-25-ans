@@ -14,15 +14,13 @@ function buildteam() {
         echo -e "\input{$inputfile}" >> all.tex
     done
 
-    # # build
-    # pdflatex main.tex
-    # pdflatex main.tex
-    # pdflatex main.tex
+    # build
+    pdflatex main.tex && pdflatex main.tex && pdflatex main.tex
 
-    # # copy
-    # echo -e "Copying current 'main.pdf' to 'output/$team.pdf' ..."
-    # cp -vf main.pdf output/$team.pdf
-    # pdfinfo output/$team.pdf | grep 'Pages'
+    # copy
+    echo -e "Copying current 'main.pdf' to 'output/$team.pdf' ..."
+    cp -vf main.pdf output/$team.pdf
+    pdfinfo output/$team.pdf | grep 'Pages'
 }
 
 for team in $(seq 1 $NB_EQUIPES); do
