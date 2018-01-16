@@ -18,7 +18,7 @@ cd /tmp/  # ou n'importe où
 git clone https://github.com/Naereen/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
 cd Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
 ```
-- **ATTENTION** : renseignez le nombre `NB_TEAM` d'équipes et le nombre `NB_QUESTIONS` de questions par fiche d'énigmes, dans le fichier [`config.py`](config.py), ainsi que dans [`numberofpeopleineachteam.tex`](numberofpeopleineachteam.tex) et [`numberofenigmas.tex`](numberofenigmas.tex).
+- **ATTENTION** : renseignez le nombre d'équipes `NB_EQUIPES`, le nombre de joueurs par équipes `NB_PAR_EQUIPES` et le nombre de questions par fiche d'énigmes `NB_QUESTIONS`, dans le fichier [`prebuild.sh`](prebuild.sh),
 - Si besoin, rajoutez des énigmes (en rédigeant des petits fichiers Markdown, suivant [ce modèle](template.md)), comme ceux dans ce dossier [`src`](src/),
 - Enfin, construisez tous les livrets en appelant `make all`. Ça peut prendre quelques minutes !
 ```bash
