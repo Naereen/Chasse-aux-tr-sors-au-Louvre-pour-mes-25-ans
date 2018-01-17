@@ -7,8 +7,8 @@ send:	send_zamok
 send_zamok:
 	CP --exclude=.git ./ ${Szam}publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/
 
-compile_all:	clean alltex all_pdf
-compile_one:	clean alltex main.pdf
+compile_all:	clean alltex all_pdf clean
+compile_one:	clean alltex main.pdf clean
 main.pdf:
 	./prebuild.sh
 	pdflatex main.tex

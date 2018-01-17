@@ -9,9 +9,12 @@ function buildall() {
 
     echo -e "% This is automatically generated with 'build.sh', DO NOT EDIT BY HAND." >> all.tex
 
-    for inputfile in $(find ./src/ -iname '[[:digit:]]*.tex' | sort -n); do
-        echo -e "\input{$inputfile}" >> all.tex
+    cd ./src/
+    for inputfile in $(find . -iname '[[:digit:]]*.tex' | sed s_'./'_''_ | sort -n); do
+        echo -e "$inputfile"
+        echo -e "\input{./src/$inputfile}" >> ../all.tex
     done
+    cd ..
 
     # build
     pdflatex main.tex && pdflatex main.tex && pdflatex main.tex
