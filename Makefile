@@ -21,8 +21,7 @@ all_pdf:
 	./build.sh
 
 clean:
-	rm -vf main.aux main.bbl main.blg main.brf main.dvi main.fdb_latexmk main.fls main.synctex.gz main.haux main.hidx main.htmp main.htoc main.id[vx] main.ilg main.ind main.lg main.lof main.log main.lot main.meta main.nav main.out main.ps main.snm main.tid main.tmp main.tms main.toc main.vrb
-	rm -vf *.aux src/*.aux
+	mv -vf src/*.tex src/*.aux *.aux *.bbl *.blg *.brf *.dvi *.fdb_latexmk *.fls *.synctex.gz *.haux *.hidx *.htmp *.htoc *.idv *.idx *.ilg *.ind *.lg *.lof *.log *.lot *.meta *.nav *.out *.ps *.snm *.tid *.tmp *.tms *.toc *.vrb /tmp/
 
 .SUFFIXES:
 .SUFFIXES: .md .tex
