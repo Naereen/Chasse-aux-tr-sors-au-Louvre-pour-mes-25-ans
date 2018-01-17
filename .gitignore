@@ -1,8 +1,13 @@
+# PDF
 output/*.pdf
 *.pdf
+
+# Automatically generated files
 src/*.tex
 all.tex
+config.tex
 
+# Private file
 telephones.tex
 
 # LaTeX temporary files #
