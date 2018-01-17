@@ -5,23 +5,23 @@ all:	compile_one send
 
 send:	send_zamok
 send_zamok:
-	CP --exclude=.git --exclude=output ./ ${Szam}publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/
-	CP --exclude=.git ./output/*.pdf ${Szam}publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/
+	-CP --exclude=.git --exclude=output ./ ${Szam}publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/
+	-CP --exclude=.git ./output/*.pdf ${Szam}publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/
 
 compile_all:	clean alltex all_pdf clean
 compile_one:	clean alltex main.pdf clean
 main.pdf:
-	./prebuild.sh
-	pdflatex main.tex
-	pdflatex main.tex
-	pdflatex main.tex
+	-./prebuild.sh
+	-pdflatex main.tex
+	-pdflatex main.tex
+	-pdflatex main.tex
 
 all_pdf:
-	./prebuild.sh
-	./build.sh
+	-./prebuild.sh
+	-./build.sh
 
 clean:
-	mv -vf src/*.tex src/*.aux *.aux *.bbl *.blg *.brf *.dvi *.fdb_latexmk *.fls *.synctex.gz *.haux *.hidx *.htmp *.htoc *.idv *.idx *.ilg *.ind *.lg *.lof *.log *.lot *.meta *.nav *.out *.ps *.snm *.tid *.tmp *.tms *.toc *.vrb /tmp/
+	-mv -vf src/*.tex src/*.aux *.aux *.bbl *.blg *.brf *.dvi *.fdb_latexmk *.fls *.synctex.gz *.haux *.hidx *.htmp *.htoc *.idv *.idx *.ilg *.ind *.lg *.lof *.log *.lot *.meta *.nav *.out *.ps *.snm *.tid *.tmp *.tms *.toc *.vrb /tmp/
 
 .SUFFIXES:
 .SUFFIXES: .md .tex
