@@ -9,7 +9,7 @@
 
 <a href="https://perso.crans.org/besson/publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/main.pdf"><img width="50%" src="screenshots/demo2.png"></a><a href="https://perso.crans.org/besson/publis/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git/main.pdf"><img width="50%" src="screenshots/demo3.png"></a>
 
-- Liste d'énigmes : pas encore ! :boom: seulement après le jour J :smiley: !
+- Liste d'énigmes : dans ce dossier [`src/`](src/).
 
 - Exemple de deux énigmes ([29](srd/29.md) et [21](src/21.md), des clins d'œil à Kaamelott) :
 
@@ -22,7 +22,7 @@ Pour fêter nos 25 ans avec une amie, nous avons organisé  une "chasse aux tré
 Nous avons écrit 50 énigmes, consistant pour la plupart en une tâche simple du genre ["prendre en photo 5 extraits écrits en langue ancienne"](src/1.md), ["prendre en photo une statue de Voltaire"](src/2.md), etc.
 Certaines étaient plus difficiles, et moins objectives, comme ["trouver un sosie de Lilian"](src/4.md)...
 
-Nous avions réunis 24 amis, regroupés en équipe de 4 personnes.
+Nous avions réunis 24 amis, regroupés en équipe de 4-5 personnes.
 
 Ce dépôt Git contient les sources (LaTeX et Markdown), des modèles et des scripts pour créer des livres d'énigmes.
 
@@ -43,14 +43,14 @@ $ cd Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.git
 ```bash
 $ make all_pdf
 ```
-- Cela va constituer, dans le dossier [`output/`](output/), `NB_TEAM` différents livrets, avec simplement un document PDF compilé, chacun contenant `NB_QUESTIONS` questions. La source LaTeX n'est pas sauvegardée, pour assurer une non-reproductibilité de l'échantillon aléatoire ! (inutile, mais drôle !)
+- Cela va constituer, dans le dossier [`output/`](output/), `NB_EQUIPES` différents livrets, avec simplement un document PDF compilé, chacun contenant `NB_QUESTIONS` questions. La source LaTeX n'est pas sauvegardée, pour assurer une non-reproductibilité de l'échantillon aléatoire ! (inutile, mais drôle !)
 
 ----
 
 ## Sources et idées
 - La page [sélections du site web du Louvre](http://www.louvre.fr/selections)
 - Une visite au Louvre !
-- De l'aide de nos amis, merci notamment à [Ludovic Sacchelli](http://www.cmap.polytechnique.fr/~sacchelli/).
+- De l'aide de nos amis, merci notamment à [Ludo](http://www.cmap.polytechnique.fr/~sacchelli/).
 - De l'inspiration et de nombreuses sources...
 
 ----
@@ -63,9 +63,17 @@ $ make all_pdf
 
 ----
 
+## Bilan et solution
+- TODO je veux faire un petit résumé des statistiques, un petit aperçu de ce que nos amis auront pensé de cette idée (on peut leur demander de nous envoyer un texto chacun)
+- TODO je veux aussi récupérer les solutions de tout le monde, et en faire une super jolie page web responsive qui montre une galeries des œuvres photographiées, l'énigme correspondante, et la localisation dans le musée
+
+----
+
 ## :scroll: Licence ? [![CC BY-NC-ND 4.0 licence](https://img.shields.io/github/license/Naereen/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans.svg)](https://github.com/Naereen/Chasse-aux-tr-sors-au-Louvre-pour-mes-25-ans/blob/master/LICENSE)
 Ce dépôt git et tous les fichiers contenus sont publiés librement sous les termes de la [Licence CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/) (voir le fichier [LICENSE](LICENSE)).
 © Hélène Javelaud et [Lilian Besson](https://GitHub.com/Naereen), 2018.
+
+**Note : aucun bénéfice financier n'a été ni ne sera tiré de ces documents.**
 
 [![Built with Markdown](https://img.shields.io/badge/Construit%20avec-Markdown-1abc9c.svg)](http://commonmark.org)
 [![Built with Pandoc](https://img.shields.io/badge/Construit%20avec-Pandoc-1abc9c.svg)](https://pandoc.org)
