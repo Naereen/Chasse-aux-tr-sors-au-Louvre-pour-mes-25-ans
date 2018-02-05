@@ -1,7 +1,8 @@
 # Makefile to convert markdown poems to PDF
 SHELL=/usr/bin/env /bin/bash
 
-all:	compile_one send
+all:	compile_all send
+one:	compile_one send
 
 send:	send_zamok
 send_zamok:
